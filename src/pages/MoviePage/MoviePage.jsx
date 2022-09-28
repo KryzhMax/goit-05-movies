@@ -45,7 +45,7 @@ const MoviePage = () => {
         <SectionContainer>
           <h2>
             Genres:
-            {genres[0].name}, {genres[1].name}
+            {genres[0]?.name}, {genres[1]?.name}
           </h2>
 
           <PStyled>Overview: {overview}</PStyled>
