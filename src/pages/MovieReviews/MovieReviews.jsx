@@ -1,9 +1,6 @@
 import { Link, useLocation, useParams } from 'react-router-dom';
-// import { useState } from 'react';
 import Avatar from 'react-avatar';
 import PropTypes from 'prop-types';
-// import API from 'components/movies-api/API';
-// import Spinner from 'components/spinner/Spinner';
 
 import useHook from '../../hooks/hooks';
 import {
@@ -14,7 +11,6 @@ import {
 } from './MovieReviews.styled';
 
 const MovieReviews = () => {
-  // const [status, setStatus] = useState(API.IDLE);
   const movieId = useParams();
   const reviews = useHook.useFetchReviews(movieId);
   const location = useLocation();
