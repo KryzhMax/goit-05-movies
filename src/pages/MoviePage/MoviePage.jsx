@@ -15,7 +15,7 @@ const MoviePage = () => {
 
   const movie = useHook.useFetchMovie(movieId);
   const location = useLocation();
-  // if (!movie) return null;
+  if (!movie) return null;
   const { title, genres, homepage, overview, tagline, backdrop_path, adult } =
     movie || {};
 
