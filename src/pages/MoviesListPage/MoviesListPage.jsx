@@ -19,7 +19,6 @@ const MoviesPage = () => {
   const [movies, setMovies] = useState([]);
   const [page, setPage] = useState(1);
   const [status, setStatus] = useState(API.IDLE);
-  const [error, setError] = useState(false);
   const [searchParams, setSearchParams] = useSearchParams();
 
   useEffect(() => {
@@ -38,7 +37,7 @@ const MoviesPage = () => {
         }
       } catch (error) {
         setStatus(API.REJECTED);
-        setError(true);
+        console.log(error);
       }
     };
     getMovies();

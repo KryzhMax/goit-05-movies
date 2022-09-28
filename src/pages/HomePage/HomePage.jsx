@@ -6,7 +6,6 @@ import Spinner from '../../components/spinner/Spinner';
 const HomePage = () => {
   const [movies, setMovies] = useState([]);
   const [status, setStatus] = useState(API.IDLE);
-  const [error, setError] = useState(false);
 
   useEffect(() => {
     setStatus(API.PENDING);
@@ -15,7 +14,7 @@ const HomePage = () => {
       setStatus(API.RESOLVED);
     } catch (error) {
       setStatus(API.REJECTED);
-      setError(true);
+      console.log(error);
     }
   }, []);
 
